@@ -1,0 +1,38 @@
+export default function PortfolioLink({
+  link = '#',
+  title,
+  description,
+  image,
+}: {
+  link?: string;
+  title: string;
+  description: string;
+  image?: string;
+}) {
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex w-full flex-col gap-8 rounded-lg border border-neutral-900 transition-colors duration-300 ease-in-out hover:border-neutral-600 max-w-md"
+    >
+      <div className="flex aspect-video w-full items-center justify-center rounded-lg bg-gray-950">
+        {image ? (
+          <img
+            src={image}
+            alt={title}
+            className="rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-105"
+          />
+        ) : (
+          <p className="text-2xl transition-transform duration-300 ease-in-out group-hover:scale-105">
+            😀
+          </p>
+        )}
+      </div>
+      <div className="flex flex-col gap-2 p-4">
+        <p className="text-lg font-bold text-white">{title}</p>
+        <p className="text-sm font-semibold text-neutral-500">{description}</p>
+      </div>
+    </a>
+  );
+}

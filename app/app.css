@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+* {
+  @apply cursor-default;
+  scroll-behavior: smooth;
+}
+
+input,
+textarea {
+  @apply cursor-text;
+}
+
+@theme {
+  --color-background: #0a0a0f;
+  --color-secondary-background: rgba(255, 255, 255, 0.01);
+  --color-main: #3b82f6;
+  --color-highlight: #60a5fa;
+  --color-dark-gradient-start: #1e3a8a;
+  --color-dark-gradient-end: #0f172a;
+}
+
+html,
+body {
+  @apply bg-background;
+}
