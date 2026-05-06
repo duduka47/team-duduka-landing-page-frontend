@@ -45,5 +45,5 @@ export async function action({ request }: { request: Request }) {
 
   // TODO: Save e-mail and whatsapp in a database to contact the user later
 
-  return redirect(`https://wa.me/5511966198366?text=${encoded}`);
+  return redirect(`https://wa.me/5511921761677?text=${encoded}`);
 }

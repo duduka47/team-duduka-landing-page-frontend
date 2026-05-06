@@ -48,7 +48,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: 'easeInOut', delay: 0.2 }}
-            className="bg-main self-start rounded-lg px-5 py-3 text-sm font-semibold text-white"
+            className="bg-main self-start rounded-lg px-5 py-3 text-sm font-semibold text-white transition-all ease-in-out hover:bg-blue-600 active:scale-95"
           >
             {t('home.contact_us')}
           </motion.button>
@@ -68,7 +68,10 @@ export default function HomePage() {
           <p className="text-xs text-neutral-500">{t('home.degree')}</p>
         </motion.div>
       </section>
-      <section className="flex w-full flex-col items-center gap-12 px-4 md:px-12">
+      <section
+        className="flex w-full flex-col items-center gap-12 px-4 md:px-12"
+        id="services"
+      >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -157,7 +160,10 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-      <section className="bg-secondary-background flex w-full flex-col gap-8 px-4 py-8">
+      <section
+        className="bg-secondary-background flex w-full flex-col gap-8 px-4 py-8"
+        id="portfolio"
+      >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -262,7 +268,10 @@ export default function HomePage() {
           {t('home.other_team_members')}
         </motion.p>
       </section>
-      <section className="flex flex-col items-center gap-8 px-4">
+      <section
+        className="flex flex-col items-center gap-8 px-4"
+        id="contact-us"
+      >
         <SectionTitle>{t('home.contact_us')}</SectionTitle>
         <ContactForm
           translations={{
