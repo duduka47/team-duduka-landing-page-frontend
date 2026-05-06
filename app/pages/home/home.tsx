@@ -273,7 +273,7 @@ export default function HomePage() {
         className="flex flex-col items-center gap-8 px-4"
         id="contact-us"
       >
-        <SectionTitle>{t('home.contact_us')}</SectionTitle>
+        <SectionTitle>{t('home.talk_to_us')}</SectionTitle>
         <ContactForm
           translations={{
             name: t('home.input.full_name'),
