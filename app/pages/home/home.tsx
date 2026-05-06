@@ -44,14 +44,15 @@ export default function HomePage() {
           >
             {t('home.description')}
           </motion.p>
-          <motion.button
+          <motion.a
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: 'easeInOut', delay: 0.2 }}
+            href="#contact-us"
             className="bg-main self-start rounded-lg px-5 py-3 text-sm font-semibold text-white transition-all ease-in-out hover:bg-blue-600 active:scale-95"
           >
             {t('home.contact_us')}
-          </motion.button>
+          </motion.a>
         </div>
         <motion.div
           initial={{ opacity: 0, x: 40 }}
