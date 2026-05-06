@@ -168,16 +168,16 @@ export default function HomePage() {
         </motion.div>
         <div className="flex w-full flex-wrap justify-center gap-8">
           {[
-            {
-              titleKey: 'home.e-commerce_platform',
-              descKey: 'home.e-commerce_platform_description',
-              link: import.meta.env.VITE_E_COMMERCE_APP_PORTFOLIO_URL,
-            },
-            {
-              titleKey: 'home.managament_application',
-              descKey: 'home.managament_application_description',
-              link: import.meta.env.VITE_MANAGEMENT_APP_PORTFOLIO_URL,
-            },
+            // {
+            //   titleKey: 'home.e-commerce_platform',
+            //   descKey: 'home.e-commerce_platform_description',
+            //   link: import.meta.env.VITE_E_COMMERCE_APP_PORTFOLIO_URL,
+            // },
+            // {
+            //   titleKey: 'home.managament_application',
+            //   descKey: 'home.managament_application_description',
+            //   link: import.meta.env.VITE_MANAGEMENT_APP_PORTFOLIO_URL,
+            // },
             {
               titleKey: 'home.team_duduka_landing_page',
               descKey: 'home.team_duduka_landing_page_description',
