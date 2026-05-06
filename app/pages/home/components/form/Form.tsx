@@ -1,11 +1,13 @@
 import Input from './Input.js';
 import { Form as RouterForm, useActionData } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 export default function ContactForm({
   translations,
 }: {
   translations: Record<string, string | string[]>;
 }) {
+  const { t } = useTranslation();
   const actionData = useActionData<{ errors?: Record<string, string> }>();
   const errors = actionData?.errors;
   const options = translations.service_options as string[];
@@ -28,7 +30,6 @@ export default function ContactForm({
         mask="phone"
         error={errors?.whatsapp}
       />
-
       <div className="flex flex-col gap-1">
         <label className="text-sm font-semibold text-neutral-300">
           {translations.service_type}
@@ -48,10 +49,9 @@ export default function ContactForm({
           ))}
         </select>
         {errors?.service_type && (
-          <p className="text-xs text-red-500">{errors.service_type}</p>
+          <p className="text-xs text-red-500">{t(errors.service_type)}</p>
         )}
       </div>
-
       <div className="flex flex-col gap-1">
         <label
           htmlFor="message"
@@ -65,10 +65,9 @@ export default function ContactForm({
           className="bg-secondary-background min-h-48 w-full resize-none rounded-lg border border-neutral-900 p-2 text-neutral-300 duration-300 focus:ring-1 focus:ring-blue-600 focus:outline-none"
         />
         {errors?.message && (
-          <p className="text-xs text-red-500">{errors.message}</p>
+          <p className="text-xs text-red-500">{t(errors.message)}</p>
         )}
       </div>
-
       <button
         type="submit"
         className="rounded-md bg-blue-600 px-6 py-3 font-semibold text-white transition-opacity duration-300 hover:opacity-80"
