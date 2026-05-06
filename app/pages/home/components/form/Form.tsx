@@ -13,7 +13,11 @@ export default function ContactForm({
   const options = translations.service_options as string[];
 
   return (
-    <RouterForm method="post" className="flex w-full max-w-lg flex-col gap-4">
+    <RouterForm
+      method="post"
+      className="flex w-full max-w-lg flex-col gap-4"
+      action="."
+    >
       <Input
         label={translations.name as string}
         name="name"
