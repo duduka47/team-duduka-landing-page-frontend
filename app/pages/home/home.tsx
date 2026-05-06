@@ -18,6 +18,7 @@ import Danilo from '~/assets/images/danilo.jpeg';
 import Oliveira from '~/assets/images/oliveira.png';
 import Eduardo from '~/assets/images/eduardo.png';
 import Duduka from '~/assets/images/duduka_capa.png';
+import Logo from '~/components/Logo.js';
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -181,8 +182,10 @@ export default function HomePage() {
               titleKey: 'home.team_duduka_landing_page',
               descKey: 'home.team_duduka_landing_page_description',
               link: import.meta.env.VITE_TEAM_DUDUKA_LANDING_PAGE_GITHUB_URL,
+              image: <Logo />,
+              svg: true,
             },
-          ].map(({ titleKey, descKey, link }, i) => (
+          ].map(({ titleKey, descKey, link, image, svg }, i) => (
             <motion.div
               key={titleKey}
               className="w-full max-w-md"
@@ -195,6 +198,8 @@ export default function HomePage() {
                 title={t(titleKey)}
                 description={t(descKey)}
                 link={link}
+                image={image}
+                svg={svg}
               />
             </motion.div>
           ))}

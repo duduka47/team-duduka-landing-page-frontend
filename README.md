@@ -1,87 +1,140 @@
-# Welcome to React Router!
+# TEAM DUDUKA — Landing Page
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Official landing page for **TEAM DUDUKA**, a technology company that develops apps, systems, websites, and automations. Built with React Router v7, TailwindCSS, and Motion.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+🌐 **Live:** [teamduduka.com](https://teamduduka.com)
+
+---
+
+## Tech Stack
+
+- ⚛️ React Router v7 — SSR and routing
+- 🎨 TailwindCSS — styling
+- 🎞️ Motion/React — animations
+- 🌍 i18next — internationalization (PT, EN, ES)
+- 📘 TypeScript
+
+---
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- Fully responsive (mobile, tablet, desktop)
+- Internationalization with PT, EN and ES support
+- Contact form with WhatsApp redirect
+- Scroll-triggered animations
+- Team section with real member profiles
+- Portfolio with live project links
+
+---
 
 ## Getting Started
 
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
 ### Installation
 
-Install the dependencies:
-
 ```bash
+git clone https://github.com/teamduduka/landing-page
+cd landing-page
 npm install
 ```
 
-### Development
+### Environment Variables
 
-Start the development server with HMR:
+Create a `.env` file in the root directory:
+
+```env
+VITE_E_COMMERCE_APP_PORTFOLIO_URL=
+VITE_MANAGEMENT_APP_PORTFOLIO_URL=
+VITE_TEAM_DUDUKA_LANDING_PAGE_GITHUB_URL=
+VITE_TEAM_MEMBER_1_IMAGE_URL=
+VITE_TEAM_MEMBER_2_IMAGE_URL=
+VITE_TEAM_MEMBER_3_IMAGE_URL=
+```
+
+### Development
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Available at `http://localhost:5173`
 
-## Building for Production
+### Production Build
 
-Create a production build:
+```bash
+npm run build
+npm start
+```
+
+---
+
+## Project Structure
+
+├── app/
+│   ├── components/       # Reusable UI components
+│   │   ├── form/         # Contact form and inputs
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── ServiceCard.tsx
+│   │   ├── MemberCard.tsx
+│   │   ├── PortfolioLink.tsx
+│   │   ├── StepCard.tsx
+│   │   └── HowItWorksCard.tsx
+│   ├── locales/          # Translation files (en, pt, es)
+│   ├── HomePage.tsx      # Main page + action
+│   └── root.tsx
+├── public/
+└── package.json
+
+---
+
+## Internationalization
+
+The site supports three languages. Translation files are located in `app/locales/`:
+
+locales/
+├── en/translation.json
+├── pt/translation.json
+└── es/translation.json
+
+To add a new language, create a new folder with the locale code and add a `translation.json` file following the same structure.
+
+---
+
+## Deployment
+
+Deployed on **Vercel**. Any push to `main` triggers a new deployment.
+
+To deploy manually:
 
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+Then follow the [Vercel deployment guide](https://vercel.com/docs).
 
 ---
 
-Built with ❤️ using React Router.
+## Contributing
+
+This is an open source project. Feel free to open issues or submit pull requests.
+
+1. Fork the repository
+2. Create your branch: `git checkout -b feature/my-feature`
+3. Commit your changes: `git commit -m 'add my feature'`
+4. Push to the branch: `git push origin feature/my-feature`
+5. Open a Pull Request
+
+---
+
+## License
+
+MIT License — feel free to use this project as a reference or template.
+
+---
+
+Built with ❤️ by [TEAM DUDUKA](https://teamduduka.com)
